@@ -1,7 +1,9 @@
+let humanScore = 0;
+let computerScore = 0;
+
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
-
 
 function getComputerChoice() {
     const randomValue = getRandomInt(3);
@@ -17,13 +19,11 @@ function getComputerChoice() {
     }
 }
 
-
 function getHumanChoice() {
     const humanInput = prompt("Rock, paper, or scissors?");
     console.log("human selected" + " " + humanInput);
     return humanInput;
 }
 
-
-getComputerChoice()
-getHumanChoice()
+getComputerChoice();
+getHumanChoice();
