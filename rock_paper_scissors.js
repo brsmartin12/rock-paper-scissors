@@ -35,36 +35,54 @@ function playRound() {
         if (computerChoice === "paper") {
             // computer wins
             console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
+            computerScore++;
+            console.log(`The Score is Human: ${humanScore} Computer: ${computerScore}`);
         } else if (computerChoice === "scissors") {
             // human wins
             console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+            humanScore++;
+            console.log(`The Score is Human: ${humanScore} Computer: ${computerScore}`);
         } else {
             //tie
             console.log(`It's a tie! ${humanChoice} and ${computerChoice}`);
+            // Nothing happens to the scores
+            console.log(`The Score is Human: ${humanScore} Computer: ${computerScore}`);
         }
 
     } else if (humanChoice === "paper") {
         if (computerChoice === "scissors") {
             // computer wins
             console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
+            computerScore++;
+            console.log(`The Score is Human: ${humanScore} Computer: ${computerScore}`);
         } else if (computerChoice === "rock") {
             // human wins
             console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+            humanScore++;
+            console.log(`The Score is Human: ${humanScore} Computer: ${computerScore}`);
         } else {
             //tie
             console.log(`It's a tie! ${humanChoice} and ${computerChoice}`);
+            // Nothing happens to the scores
+            console.log(`The Score is Human: ${humanScore} Computer: ${computerScore}`);
         }
 
     } else if (humanChoice === "scissors") {
         if (computerChoice === "rock") {
             // computer wins
             console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
+            computerScore++;
+            console.log(`The Score is Human: ${humanScore} Computer: ${computerScore}`);
         } else if (computerChoice === "paper") {
             // human wins
             console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+            humanScore++;
+            console.log(`The Score is Human: ${humanScore} Computer: ${computerScore}`);
         } else {
             //tie
             console.log(`It's a tie! ${humanChoice} and ${computerChoice}`);
+            // Nothing happens to the scores
+            console.log(`The Score is Human: ${humanScore} Computer: ${computerScore}`);
         }
 
     } else {  // this is a typo
@@ -72,3 +90,5 @@ function playRound() {
         console.log('Oops! A typo.');
     }
 }
+
+playRound();
