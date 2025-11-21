@@ -28,8 +28,8 @@ function getHumanChoice() {
 }
 
 function playRound() {
-    const computerChoice = getComputerChoice();
     const humanChoice = getHumanChoice();
+    const computerChoice = getComputerChoice();
 
     if (humanChoice === "rock") {
         if (computerChoice === "paper") {
@@ -91,4 +91,19 @@ function playRound() {
     }
 }
 
-playRound();
+function playGame() {
+    // Project constraints state that the game will be played in 5 rounds,
+    // But I want the game to be played first to 5.
+
+    while (humanScore < 5 && computerScore < 5) {
+        playRound();
+    }
+
+    if (humanScore < 5) {
+        console.log(`You lose! Final Score is Human: ${humanScore} Computer: ${computerScore}`);
+    } else {
+        console.log(`You win! Final score is Human: ${humanScore} Computer: ${computerScore}`);
+    }
+}
+
+playGame();
